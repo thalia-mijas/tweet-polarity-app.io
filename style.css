@@ -1,0 +1,224 @@
+:root{ 
+    --white: #FFFFFF;
+    --black: #000000;
+    --positive: #8BB7A2;
+    --positive-card:   #E4F7EE;
+    --neutral: #5C548B;
+    --neutral-card:   #EEEDFB;
+    --negative: #EE5D50;   
+    --negative-card:#FFE1DE;
+    --blue-gray: #5D6C89;
+    --divisions: 16px;
+    --radius: 16px;
+    --lg: 32px;
+    --md: 24px;
+    --sm: 16px;
+    --border: 16px;
+}
+body{
+    font-family: 'Quicksand', sans-serif;
+}
+nav{
+    width: 100%;
+    user-select: none;
+    display: grid;
+    grid-template-columns: 95% auto;
+}
+nav button{
+    border-radius: var(--radius);
+    border: none;
+    cursor: pointer;
+    height: 50%;
+    align-self: center;
+}
+nav button:hover{
+    background-color: var(--blue-gray);
+    color: var(--white);
+}
+.principal{
+    width: 100%;
+    display: grid;
+    grid-template-columns: auto 40% 30%;
+    grid-template-areas:
+    "container1 container2 container3"
+    "container4 container4 container5"
+    ;
+    gap: var(--divisions);
+}
+.container1{
+    grid-area: container1;
+    display: flex;
+    flex-flow: column wrap;
+    gap: var(--divisions);
+    justify-content: space-evenly;
+}
+.card{
+    border-radius: var(--radius);
+    box-shadow: 0px 4px 16px rgb(0, 0, 0, 0.1);
+    display: grid;
+    grid-template-columns: 40% auto;
+    grid-template-areas: 
+    "icon counter"
+    "icon polarity";
+}
+.card button{
+    border-radius: var(--radius);
+    border: none;
+    width: 40%;
+    height: 80%;
+    justify-self: center;
+    align-self: center;
+}
+.icon{
+    grid-area: icon;
+}
+.counter{
+    grid-area: counter;
+    font-size: var(--lg);
+    margin: 0;
+    font-weight: bold;
+    align-self: flex-end;
+}
+.polarity{
+    grid-area: polarity;
+    margin: 0;
+    font-size: var(--sm);
+    align-self: flex-start;
+}
+.positive{
+    color: var(--positive);
+}
+.positive-b{
+    background-color: var(--positive-card);
+}
+.neutral{
+    color:  var(--neutral);
+}
+.neutral-b{
+    background-color:  var(--neutral-card);
+}
+.negative{
+    color:  var(--negative);
+}
+.negative-b{
+    background-color:  var(--negative-card);
+}
+.container2{
+    grid-area: container2;
+    box-shadow: 0px 4px 16px rgb(0, 0, 0, 0.1);
+    border-radius: var(--radius);
+    padding: var(--border);
+    overflow: auto;
+    display: flex;
+    flex-direction: column;
+}
+.title-container2{
+    grid-area: title;
+}
+.subtitle-container2{
+    grid-area: subtitle;
+}
+.content-container2{
+    grid-area: content;
+    display: grid;
+    grid-template-columns: 30% auto;
+    grid-template-areas:
+    "bars image";
+    gap: var(--divisions);
+}
+.bars-content-container2{
+    grid-area: bars;
+    display: flex;
+    flex-direction: column;
+    gap: var(--divisions);
+    justify-content: space-evenly;
+}
+.card-bars{
+    border-radius: var(--radius);
+    box-shadow: 0px 4px 16px rgb(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    padding: var(--border);
+}
+.image-content-container2{
+    grid-area: image;
+}
+.container3{
+    grid-area: container3;
+    border-radius: var(--radius);
+    padding: var(--border);
+    box-shadow: 0px 4px 16px rgb(0, 0, 0, 0.1);  
+    overflow: auto;
+}
+.container4{
+    grid-area: container4;
+    border-radius: var(--radius);
+    padding: var(--border);
+    box-shadow: 0px 4px 16px rgb(0, 0, 0, 0.1);
+    overflow: auto;
+}
+table{
+    width: 100%;
+}
+tr td:nth-child(1){
+    text-align: center;
+}
+tr td:nth-child(3){
+    text-align: center;
+}
+tr:nth-child(1) td{
+    border-bottom: solid #000000;
+    text-align: center;
+    font-weight: bold;
+}
+.container5{
+    grid-area: container5;
+    border-radius: var(--radius);
+    padding: var(--border);
+    box-shadow: 0px 4px 16px rgb(0, 0, 0, 0.1);
+    overflow: auto;
+    text-align: center;
+}
+@media (max-width: 912px) {
+    .principal{
+        display: grid;
+        grid-template-columns: 100%;
+        grid-template-areas:
+        "container1"
+        "container2"
+        "container3"
+        "container4"
+        "container5";
+        justify-items: stretch;
+    }
+}
+@media (max-width: 500px) {
+    .content-container2{
+        grid-template-columns: 100%;
+        grid-template-areas:
+        "bars"
+        "image";
+    }
+}
+@media (max-width: 200px) {
+    .card button{
+        width: 80%;
+    }
+    nav{
+        display: flex;
+        flex-wrap: wrap;
+        margin-bottom: var(--divisions);
+    }
+}
+img{
+    width: 100%;
+    background-color: var(--blue-gray);
+}
+select{
+    font-family: 'Quicksand', sans-serif;
+    font-size: medium;
+    margin-bottom: var(--divisions);
+}
+p{
+    margin: 0;
+}
