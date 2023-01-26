@@ -136,6 +136,13 @@ nav button:hover{
     display: flex;
     flex-direction: column;
 }
+.card-bars p:nth-child(1){
+    color: var(--card-subtitle-color);
+}
+.card-bars p:nth-child(2){
+    color: var(--text-dark);
+    font-weight: bold;
+}
 .image-content-container2{
     grid-area: image;
 }
@@ -200,6 +207,10 @@ tr:nth-child(1) td{
         grid-template-areas:
         "bars"
         "image";
+    }
+    .bars-content-container2{
+        flex-direction: row;
+        justify-content: space-between;
     }
 }
 @media (max-width: 200px) {
