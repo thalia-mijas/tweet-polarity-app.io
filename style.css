@@ -9,11 +9,13 @@
     --negative-card:#FFE1DE;
     --blue-gray: #5D6C89;
     --divisions: 16px;
+    --divisions-r: 24px;
     --radius: 16px;
-    --border: 16px;
 }
 body{
     font-family: 'Quicksand', sans-serif;
+    margin: var(--divisions);
+    padding: var(--divisions);
 }
 nav{
     width: 100%;
@@ -40,9 +42,9 @@ nav button:hover{
     grid-template-columns: auto 40% 30%;
     grid-template-areas:
     "container1 container2 container3"
-    "container4 container4 container5"
-    ;
-    gap: var(--divisions);
+    "container4 container4 container5";
+    column-gap: var(--divisions);
+    row-gap: var(--divisions-r);    
 }
 .container1{
     grid-area: container1;
@@ -106,7 +108,7 @@ nav button:hover{
     grid-area: container2;
     box-shadow: 0px 4px 16px rgb(0, 0, 0, 0.1);
     border-radius: var(--radius);
-    padding: var(--border);
+    padding: var(--divisions);
     overflow: auto;
     display: flex;
     flex-direction: column;
@@ -146,6 +148,15 @@ nav button:hover{
 .image-content-container2{
     grid-area: image;
 }
+select{
+    font-family: 'Quicksand', sans-serif;
+    margin-bottom: var(--divisions);
+    color: var(--card-subtitle-color);
+}
+label{
+    color: var(--card-subtitle-color);
+    font-size: small;
+}
 .container3{
     grid-area: container3;
     border-radius: var(--radius);
@@ -156,13 +167,13 @@ nav button:hover{
 .container4{
     grid-area: container4;
     border-radius: var(--radius);
-    padding: var(--border);
+    padding: var(--divisions);
     box-shadow: 0px 4px 16px rgb(0, 0, 0, 0.1);
     overflow: auto;
 }
 table{
     width: 100%;
-    padding-top: var(--border);
+    padding-top: var(--divisions);
 }
 tr td:nth-child(1){
     text-align: center;
@@ -178,7 +189,7 @@ tr:nth-child(1) td{
 .container5{
     grid-area: container5;
     border-radius: var(--radius);
-    padding: var(--border);
+    padding: var(--divisions);
     box-shadow: 0px 4px 16px rgb(0, 0, 0, 0.1);
     overflow: auto;
     text-align: center;
@@ -225,17 +236,11 @@ tr:nth-child(1) td{
 }
 img{
     width: 100%;
-    background-color: var(--blue-gray);
-}
-select{
-    font-family: 'Quicksand', sans-serif;
-    margin-bottom: var(--divisions);
-    color: var(--card-subtitle-color);
-}
-label{
-    color: var(--card-subtitle-color);
-    font-size: small;
 }
 p{
     margin: 0;
+}
+h1{
+    margin: 0;
+    color: var(--text-dark);
 }
