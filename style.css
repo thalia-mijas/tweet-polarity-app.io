@@ -7,7 +7,7 @@
     --neutral-card:   #EEEDFB;
     --negative: #EE5D50;   
     --negative-card:#FFE1DE;
-    --blue-gray: #5D6C89;
+    --blue-gray: #d3d7e1;
     --divisions: 16px;
     --divisions-r: 24px;
     --radius: 16px;
@@ -33,8 +33,9 @@ nav button{
     color: var(--text-dark);
 }
 nav button:hover{
-    background-color: var(--text-dark);
-    color: #FFFFFF;
+    background-color: var(--blue-gray);
+    box-shadow: 0 3px 5px -1px rgb(0, 0, 0, 0.9), 0 2px 3px -1px rgb(0, 0, 0, 0.7);
+    transform: scale(1.2);
 }
 .principal{
     width: 100%;
