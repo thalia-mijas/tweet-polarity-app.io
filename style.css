@@ -160,7 +160,7 @@ label{
 .container3{
     grid-area: container3;
     border-radius: var(--radius);
-    padding: var(--border);
+    padding: var(--divisions);
     box-shadow: 0px 4px 16px rgb(0, 0, 0, 0.1);  
     overflow: auto;
 }
@@ -243,4 +243,5 @@ p{
 h1{
     margin: 0;
     color: var(--text-dark);
+    margin-bottom: var(--divisions);
 }
