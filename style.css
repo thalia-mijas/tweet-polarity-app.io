@@ -7,10 +7,12 @@
     --neutral-card:   #EEEDFB;
     --negative: #EE5D50;   
     --negative-card:#FFE1DE;
-    --blue-gray: #d3d7e1;
+    --blue-gray: #e4e7ed;
     --divisions: 16px;
     --divisions-r: 24px;
     --radius: 16px;
+    --shadow-container: 0px 4px 16px rgb(0, 0, 0, 0.1);
+    --shadow-bottom: 0 3px 5px -1px rgb(0, 0, 0, 0.9), 0 2px 3px -1px rgb(0, 0, 0, 0.7);
 }
 body{
     font-family: 'Quicksand', sans-serif;
@@ -40,8 +42,8 @@ nav button{
 }
 nav button:hover{
     background-color: var(--blue-gray);
-    box-shadow: 0 3px 5px -1px rgb(0, 0, 0, 0.9), 0 2px 3px -1px rgb(0, 0, 0, 0.7);
-    transform: scale(1.2);
+    box-shadow: var(--shadow-bottom);
+    transform: scale(1.1);
 }
 .principal{
     width: 100%;
@@ -62,7 +64,7 @@ nav button:hover{
 }
 .card{
     border-radius: var(--radius);
-    box-shadow: 0px 4px 16px rgb(0, 0, 0, 0.1);
+    box-shadow: var(--shadow-container);
     display: grid;
     grid-template-columns: 40% auto;
     grid-template-areas: 
@@ -113,7 +115,7 @@ nav button:hover{
 }
 .container2{
     grid-area: container2;
-    box-shadow: 0px 4px 16px rgb(0, 0, 0, 0.1);
+    box-shadow: var(--shadow-container);
     border-radius: var(--radius);
     padding: var(--divisions);
     overflow: auto;
@@ -162,14 +164,14 @@ label{
     grid-area: container3;
     border-radius: var(--radius);
     padding: var(--divisions);
-    box-shadow: 0px 4px 16px rgb(0, 0, 0, 0.1);  
+    box-shadow: var(--shadow-container); 
     overflow: auto;
 }
 .container4{
     grid-area: container4;
     border-radius: var(--radius);
     padding: var(--divisions);
-    box-shadow: 0px 4px 16px rgb(0, 0, 0, 0.1);
+    box-shadow: var(--shadow-container);
     overflow: auto;
 }
 table{
@@ -191,7 +193,7 @@ tr:nth-child(1) td{
     grid-area: container5;
     border-radius: var(--radius);
     padding: var(--divisions);
-    box-shadow: 0px 4px 16px rgb(0, 0, 0, 0.1);
+    box-shadow: var(--shadow-container);
     overflow: auto;
     text-align: center;
 }
