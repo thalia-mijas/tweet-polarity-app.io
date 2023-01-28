@@ -18,19 +18,25 @@ body{
     padding: var(--divisions);
 }
 nav{
-    width: 100%;
+    height: 30px;
     user-select: none;
     display: grid;
-    grid-template-columns: 95% auto;
+    grid-template-columns: auto 30px;
     color: var(--text-dark);
     font-weight: bold;
     font-size: medium;
 }
+nav p{
+    display: flex;
+    align-items: flex-end;
+}
 nav button{
-    border-radius: var(--radius);
     border: none;
     cursor: pointer;
     color: var(--text-dark);
+    border-radius: 50%;
+    display: grid;
+    align-content: center;
 }
 nav button:hover{
     background-color: var(--blue-gray);
@@ -113,12 +119,6 @@ nav button:hover{
     overflow: auto;
     display: flex;
     flex-direction: column;
-}
-.title-container2{
-    grid-area: title;
-}
-.subtitle-container2{
-    grid-area: subtitle;
 }
 .content-container2{
     grid-area: content;
